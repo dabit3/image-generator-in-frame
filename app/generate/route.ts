@@ -13,11 +13,10 @@ const _html = (img, prompt) => {
   <!DOCTYPE html>
   <html>
     <head>  
+      <meta propert="hey:portal" content="vNext" />
       <meta property="hey:portal:button:1" content="open in browser" />
       <meta property="hey:portal:button:1:action" content="link" />
       <meta property="hey:portal:button:1:target" content="${link}" />
-  
-      <meta propert="hey:portal" content="vNext" />
       <meta property="hey:portal:image" content="${img}" />
     </head>
   </html>

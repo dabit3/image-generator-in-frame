@@ -27,10 +27,10 @@ export async function generateMetadata() {
     'fc:frame:image:aspect_ratio': '1:1',
   
     'fc:frame:post_url': `${_URL}/generate`,
-    'fc:frame:button:1': "Create your idea",
+    'fc:frame:button:1': "create from your idea",
     'fc:frame:button:1:action': 'post',
 
-    'fc:frame:button:2': "Generate image from random idea",
+    'fc:frame:button:2': "image from random idea",
     'fc:frame:button:2:action': 'post',
     'fc:frame:button:2:target': `${_URL}/generate`,
 

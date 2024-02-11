@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 
 import { useSearchParams } from 'next/navigation'
 
@@ -16,7 +17,7 @@ export default function Page() {
     >
       <p className='mb-4'>{prompt}</p>
       <a href={image || ''} target="_blank" rel="no-opener">
-        <img
+        <Image
           src={image || ""}
           width={600}
           height={600}

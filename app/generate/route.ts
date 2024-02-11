@@ -19,6 +19,9 @@ const _html = (img) => `
     <meta property="fc:frame:button:1" content="open in browser" />
     <meta property="fc:frame:button:1:action" content="link" />
     <meta property="fc:frame:button:1:target" content="${img}" />
+
+    <meta propert="hey:portal" content="vNext" />
+    <meta property="hey:portal:image" content="${img}" />
   </head>
 </html>
 `

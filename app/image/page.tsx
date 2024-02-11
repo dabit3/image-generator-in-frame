@@ -1,13 +1,6 @@
-'use client'
-import { Suspense } from 'react'
-
-import { useSearchParams } from 'next/navigation'
-
-function Page() {
-  const searchParams = useSearchParams()
- 
-  const image = searchParams.get('image')
-  const prompt = searchParams.get('prompt')
+export default function Page({ searchParams }) { 
+  const image = searchParams.image
+  const prompt = searchParams.prompt
  
   return (
     <div
@@ -29,8 +22,3 @@ function Page() {
   );
 }
 
-export default function PageComponent() {
-  <Suspense>
-    <Page />
-  </Suspense>
-}

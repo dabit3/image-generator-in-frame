@@ -1,5 +1,5 @@
 export const runtime = 'edge'
-import { URL } from '../constants'
+import { URL as _URL } from '../constants'
 
 const image = 'https://i.imgur.com/jkNjTAe.gif'
 
@@ -26,13 +26,13 @@ export async function generateMetadata() {
     'fc:frame:image': image,
     'fc:frame:image:aspect_ratio': '1:1',
   
-    'fc:frame:post_url': `${URL}/generate`,
+    'fc:frame:post_url': `${_URL}/generate`,
     'fc:frame:button:1': "Create your idea",
     'fc:frame:button:1:action': 'post',
 
     'fc:frame:button:2': "Generate image from random idea",
     'fc:frame:button:2:action': 'post',
-    'fc:frame:button:2:target': `${URL}/generate`,
+    'fc:frame:button:2:target': `${_URL}/generate`,
 
     'fc:frame:input:text': "what's your idea?",
 
@@ -40,10 +40,11 @@ export async function generateMetadata() {
     'hey:portal:image': image,
     'hey:portal:button:1': 'Generate my image',
     'hey:portal:button:1:type': 'submit',
-    'hey:portal:button:1:target': `${URL}/generate`,
+    'hey:portal:button:1:target': `${_URL}/generate`,
   }
 
   return {
+    metadataBase: new URL(_URL || ''),
     openGraph: {
       images: [
         {

@@ -1,6 +1,5 @@
 export const runtime = 'edge'
 import { URL as _URL } from '../constants'
-import Image from 'next/image'
 
 const image = 'https://i.imgur.com/jkNjTAe.gif'
 
@@ -8,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <a href="https://nader.codes" target="_blank" rel="no-opener">
-      <Image
+      <img
         src={image}
         width={400}
         height={400}

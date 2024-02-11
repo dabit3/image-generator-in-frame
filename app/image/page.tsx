@@ -1,6 +1,5 @@
 'use client'
 import { Suspense } from 'react'
-import Image from 'next/image'
 
 import { useSearchParams } from 'next/navigation'
 
@@ -18,7 +17,7 @@ function Page() {
     >
       <p className='mb-4'>{prompt}</p>
       <a href={image || ''} target="_blank" rel="no-opener">
-        <Image
+        <img
           src={image || ""}
           width={600}
           height={600}

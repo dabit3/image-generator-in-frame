@@ -30,17 +30,17 @@ export async function POST(req) {
   try {
     const data = await req.json()
     const { untrustedData } = data
-    const { inputText, fid } = untrustedData
+    const { inputText } = untrustedData
     let prompt = inputText
     let image = ''
 
     if (!inputText) {
       prompt = getRandomPrompt()
     }
-    const result:any = await fal.subscribe("fal-ai/fast-sdxl", {
+    const result:any = await fal.subscribe("fal-ai/lcm", {
       input: {
         prompt,
-        size: 'square_hd'
+        image_size: 'square_hd'
       }
     })
     if (result.images[0]) {

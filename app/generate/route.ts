@@ -12,16 +12,10 @@ const _html = (img, prompt) => {
   return `
   <!DOCTYPE html>
   <html>
-    <head>
-      <title>Frame</title>
-      <mega property="og:image" content="${img}" />
-      <meta property="fc:frame" content="vNext" />
-      <meta property="fc:frame:image" content="${img}" />
-      <meta property="fc:frame:image:aspect_ratio" content="1:1" />
-  
-      <meta property="fc:frame:button:1" content="open in browser" />
-      <meta property="fc:frame:button:1:action" content="link" />
-      <meta property="fc:frame:button:1:target" content="${link}" />
+    <head>  
+      <meta property="hey:portal:button:1" content="open in browser" />
+      <meta property="hey:portal:button:1:action" content="link" />
+      <meta property="hey:portal:button:1:target" content="${link}" />
   
       <meta propert="hey:portal" content="vNext" />
       <meta property="hey:portal:image" content="${img}" />

@@ -21,21 +21,6 @@ export default function Home() {
 export async function generateMetadata() {
   const meta = {
     'og:image': image,
-    'fc:frame': 'vNext',
-
-    'fc:frame:image': image,
-    'fc:frame:image:aspect_ratio': '1:1',
-  
-    'fc:frame:post_url': `${_URL}/generate`,
-    'fc:frame:button:1': "create from your idea",
-    'fc:frame:button:1:action': 'post',
-
-    'fc:frame:button:2': "image from random idea",
-    'fc:frame:button:2:action': 'post',
-    'fc:frame:button:2:target': `${_URL}/generate`,
-
-    'fc:frame:input:text': "what's your idea?",
-
     'hey:portal': 'vNext',
     'hey:portal:image': image,
     'hey:portal:button:1': 'Generate my image',

@@ -30,7 +30,7 @@ export async function generateMetadata() {
     'fc:frame:button:1': "Create your idea",
     'fc:frame:button:1:action': 'post',
 
-    'fc:frame:button:2': "Create random idea",
+    'fc:frame:button:2': "Generate image from random idea",
     'fc:frame:button:2:action': 'post',
     'fc:frame:button:2:target': `${URL}/generate`,
 

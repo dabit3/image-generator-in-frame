@@ -36,11 +36,11 @@ export async function generateMetadata() {
 
     'fc:frame:input:text': "what's your idea?",
 
-    'hey:portal': 'vNext',
+    'hey:portal': 'vLatest',
     'hey:portal:image': image,
+    'hey:portal:post_url': `${_URL}/generate`,
     'hey:portal:button:1': 'Generate my image',
-    'hey:portal:button:1:type': 'submit',
-    'hey:portal:button:1:target': `${_URL}/generate`,
+    'hey:portal:button:1:type': 'submit'
   }
 
   return {

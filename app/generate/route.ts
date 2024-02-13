@@ -25,6 +25,13 @@ const _html = (img, prompt) => {
   
       <meta propert="hey:portal" content="vNext" />
       <meta property="hey:portal:image" content="${img}" />
+
+      <meta property="og:image" content="${img}" />
+      <meta property="hey:portal" content="vLatest" />
+      <meta property="hey:portal:button:1" content="open in browser" />
+      <meta property="hey:portal:button:1:type" content="link" />
+      <meta property="hey:portal:button:1:target" content="${link}" />
+      <meta property="hey:portal:image" content="${img}" />
     </head>
   </html>
   `

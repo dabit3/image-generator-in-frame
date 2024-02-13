@@ -7,36 +7,6 @@ fal.config({
   credentials: process.env.FAL_KEY
 })
 
-const _html = (img, prompt) => {
-  const link = `${URL}/image/?prompt=` + prompt + `&image=` + img
-  return `
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Frame</title>
-      <mega property="og:image" content="${img}" />
-      <meta property="fc:frame" content="vNext" />
-      <meta property="fc:frame:image" content="${img}" />
-      <meta property="fc:frame:image:aspect_ratio" content="1:1" />
-  
-      <meta property="fc:frame:button:1" content="open in browser" />
-      <meta property="fc:frame:button:1:action" content="link" />
-      <meta property="fc:frame:button:1:target" content="${link}" />
-  
-      <meta propert="hey:portal" content="vNext" />
-      <meta property="hey:portal:image" content="${img}" />
-
-      <meta property="og:image" content="${img}" />
-      <meta property="hey:portal" content="vLatest" />
-      <meta property="hey:portal:button:1" content="open in browser" />
-      <meta property="hey:portal:button:1:type" content="link" />
-      <meta property="hey:portal:button:1:target" content="${link}" />
-      <meta property="hey:portal:image" content="${img}" />
-    </head>
-  </html>
-  `
-}
-
 export async function POST(req) {  
   try {
     const data = await req.json()
@@ -62,4 +32,33 @@ export async function POST(req) {
   } catch (err) {
     console.log('error:', err)
   }
+}
+
+function _html(img, prompt) {
+  const link = `${URL}/image/?prompt=` + prompt + `&image=` + img
+  return `
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Frame</title>
+      <mega property="og:image" content="${img}" />
+      <meta property="fc:frame" content="vNext" />
+      <meta property="fc:frame:image" content="${img}" />
+      <meta property="fc:frame:image:aspect_ratio" content="1:1" />
+  
+      <meta property="fc:frame:button:1" content="open in browser" />
+      <meta property="fc:frame:button:1:action" content="link" />
+      <meta property="fc:frame:button:1:target" content="${link}" />
+  
+      <meta propert="hey:portal" content="vNext" />
+      <meta property="hey:portal:image" content="${img}" />
+      <meta property="og:image" content="${img}" />
+      <meta property="hey:portal" content="vLatest" />
+      <meta property="hey:portal:button:1" content="open in browser" />
+      <meta property="hey:portal:button:1:type" content="link" />
+      <meta property="hey:portal:button:1:target" content="${link}" />
+      <meta property="hey:portal:image" content="${img}" />
+    </head>
+  </html>
+  `
 }

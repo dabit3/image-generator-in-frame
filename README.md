@@ -2,7 +2,7 @@
 
 generate images using text
 
-This model uses [Stable Diffusion XL](https://www.fal.ai/models/stable-diffusion-xl) running on [fal.ai](https://fal.ai)
+This model uses [Latent Consistency Stable Diffusion XL](https://www.fal.ai/models/latent-consistency) running on [fal.ai](https://fal.ai)
 
 ### Getting started
 
